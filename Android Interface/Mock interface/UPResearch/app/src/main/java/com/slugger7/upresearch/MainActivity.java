@@ -45,5 +45,8 @@ public class MainActivity extends AppCompatActivity {
             password.setText("");
             username.requestFocus();
         }
+        Intent intent = new Intent(this, home.class); // Creating the intent to start a new activity
+        finish(); // Closing the current activity
+        startActivity(intent); // Starting the new activity
     }
 }

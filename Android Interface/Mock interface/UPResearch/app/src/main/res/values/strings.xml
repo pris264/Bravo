@@ -13,7 +13,7 @@
     <string name="nathan_dunkley">Nathan Dunkley - 14145759</string>
     <string name="login">Login</string>
     <string name="up_logo_description">University of pretoria logo</string>
-    <string name="title_activity_person">Person</string>
+    <string name="title_activity_person">User</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -23,4 +23,8 @@
     <string name="user">User</string>
     <string name="admin">Administrator</string>
     <string name="title_activity_main22">Main22Activity</string>
+    <string name="person_edit_details">Edit details</string>
+    <string name="title_activity_person__details">Person_Details</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_person_details">User Details</string>
 </resources>

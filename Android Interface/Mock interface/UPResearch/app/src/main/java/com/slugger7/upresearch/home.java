@@ -77,7 +77,7 @@ public class home extends AppCompatActivity
         if (id == R.id.action_logout)
         {
             // Just close the activity for now as the user is not really logged in yet (mock interface)
-            finish();
+            System.exit(0);
             return true;
         }
 
