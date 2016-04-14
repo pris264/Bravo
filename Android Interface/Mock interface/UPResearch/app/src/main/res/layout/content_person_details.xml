@@ -88,7 +88,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:id="@+id/cellphone_details"
-                android:layout_weight="2"/>
+                android:layout_weight="2"
+                android:inputType="phone"/>
         </LinearLayout>
 
         <LinearLayout
@@ -144,5 +145,11 @@
                 android:id="@+id/notifications_details"
                 android:checked="true" />
         </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/save"
+            android:onClick="validateDetails"/>
     </LinearLayout>
 </android.support.v4.widget.NestedScrollView>

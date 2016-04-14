@@ -7,10 +7,10 @@ public class MockUserDetails {
     public static String getUserDetails(String username)
     {
         return "{name : 'Kevin', " +
-                "surname : 'Heritage', " +
+                "surname : '', " +
                 "email : 'kheritage222@gmail.com', " +
                 "staffnumber : '13044924', " +
-                "notifications : 'true', " +
+                "notifications : 'false', " +
                 "username : 'slugger7', " +
                 "cellphone : '0767405640'}";
     }

@@ -33,5 +33,6 @@
     <string name="cellphone">Cellphone</string>
     <string name="notifications">Notifications</string>
     <string name="staff_number">Staff Number</string>
+    <string name="save">Save</string>
 
 </resources>

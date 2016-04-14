@@ -1,5 +1,7 @@
 package com.slugger7.upresearch;
 
+import org.json.JSONObject;
+
 /**
  * Created by Slugger7 on 4/14/2016.
  */
@@ -84,6 +86,31 @@ public class Globals {
 
     public static Boolean validate()
     {
+        if (getName().length() == 0)
+            return false;
+        if (getSurname().length() == 0)
+            return false;
+        if  (getCellphone().length() == 0)
+            return false;
+        if (getEmail().length() == 0)
+            return false;
+        if (getUsername().length() == 0)
+            return false;
+        if (getStaffnumber().length() == 0)
+            return false;
+
         return true;
+    }
+
+    public static void updateData() {
+        String jsonString = "{name : '" + getName() +
+                "', surname : '" + getSurname() +
+                "', email : '" + getEmail() +
+                "', staffnumber : '" + getStaffnumber() +
+                "', notifications : '" + getNotifications() +
+                "', username : '" + getUsername() +
+                "', cellphone : '" + getCellphone() + "'}";
+
+        //TODO send data to server for update
     }
 }
