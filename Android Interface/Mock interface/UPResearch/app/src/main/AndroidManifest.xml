@@ -21,7 +21,25 @@
         <activity
             android:name=".home"
             android:label="@string/title_activity_home"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PersonActivity"
+            android:label="@string/title_activity_person"
+            android:parentActivityName=".home"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.slugger7.upresearch.home" />
+        </activity>
+        <activity
+            android:name=".PersonDetails"
+            android:label="@string/title_activity_person_details"
+            android:parentActivityName=".PersonActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.slugger7.upresearch.PersonActivity" />
+        </activity>
     </application>
 
 </manifest>
