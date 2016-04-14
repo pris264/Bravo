@@ -12,8 +12,6 @@ import android.widget.TextView;
 import org.json.JSONObject;
 
 public class MainActivity extends AppCompatActivity {
-    private EditText username;
-    private EditText password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,8 +27,8 @@ public class MainActivity extends AppCompatActivity {
      */
     public void login(View view) {
         //Getting the text fields
-        username = (EditText) findViewById(R.id.txt_username);
-        password = (EditText) findViewById(R.id.txt_password);
+        EditText username = (EditText) findViewById(R.id.txt_username);
+        EditText password = (EditText) findViewById(R.id.txt_password);
 
         assert username != null;
         assert password != null;
@@ -40,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
             setUserDetails(MockUserDetails.getUserDetails(username.getText().toString()));
             Intent intent = new Intent(this, home.class);
             finish(); // Closing the current activity
-            getAccessRights();
+            boolean[] userRights = getAccessRights(username, password);
             startActivity(intent); // Starting the new activity
             if (!Globals.validate())
             {
@@ -80,8 +78,24 @@ public class MainActivity extends AppCompatActivity {
      * is authorised for any acess at all.
      * @return boolean array
      */
-    public void getAccessRights()
+    public boolean[] getAccessRights(EditText username, EditText password)
     {
+      boolean accessRights[] = new boolean[3];
 
+      //Initialize boolean array
+      for(int i = 0; i < accessRights.length; i++)
+      {
+          accessRights[i] = false;
+      }
+
+      //Check user type
+      switch(password.getText().toString())
+      {
+          case "user": accessRights[0] = true; break;
+          case "hor" : accessRights[1] = true; break;
+          case "admin": accessRights[2] = true; break;
+      }
+
+        return accessRights;
     }
 }

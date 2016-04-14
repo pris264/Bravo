@@ -6,9 +6,9 @@ package com.slugger7.upresearch;
  *
  */
 
-import com.fasterxml.jackson.annotations.JsonIgnoreProperties;
+//import com.fasterxml.jackson.annotations.JsonIgnoreProperties;
 
-@JsonIgnoreProperties(ignoreUnknown = true)
+//@JsonIgnoreProperties(ignoreUnknown = true)
 public class Quote
 {
     private String type;
