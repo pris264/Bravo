@@ -103,14 +103,18 @@ public class Globals {
     }
 
     public static void updateData() {
-        String jsonString = "{name : '" + getName() +
+
+        //TODO send data to server for update
+    }
+
+    public static String getJson()
+    {
+        return "{name : '" + getName() +
                 "', surname : '" + getSurname() +
                 "', email : '" + getEmail() +
                 "', staffnumber : '" + getStaffnumber() +
                 "', notifications : '" + getNotifications() +
                 "', username : '" + getUsername() +
                 "', cellphone : '" + getCellphone() + "'}";
-
-        //TODO send data to server for update
     }
 }

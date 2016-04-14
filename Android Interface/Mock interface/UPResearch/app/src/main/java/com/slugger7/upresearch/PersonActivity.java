@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class PersonActivity extends AppCompatActivity {
 
@@ -30,6 +31,9 @@ public class PersonActivity extends AppCompatActivity {
             }
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        TextView display = (TextView) findViewById(R.id.display);
+        display.setText(Globals.getJson());
     }
 
 

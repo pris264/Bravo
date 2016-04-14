@@ -38,17 +38,15 @@ public class MainActivity extends AppCompatActivity {
         if ("cos301".equals(username.getText().toString()) && password.getText().toString().equals("password"))
         {
             setUserDetails(MockUserDetails.getUserDetails(username.getText().toString()));
-            Intent intent = null;
-            if (Globals.validate()) {
-                intent = new Intent(this, home.class); // Creating the intent to start a new activity
-            }
-            else
-            {
-                intent = new Intent(this, PersonDetails.class);
-            }
+            Intent intent = new Intent(this, home.class);
             finish(); // Closing the current activity
             getAccessRights();
             startActivity(intent); // Starting the new activity
+            if (!Globals.validate())
+            {
+                Intent userintent = new Intent(this, PersonDetails.class);
+                startActivity(userintent);
+            }
         }
         else
         {
