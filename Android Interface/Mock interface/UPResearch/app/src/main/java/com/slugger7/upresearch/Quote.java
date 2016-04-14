@@ -1,20 +1,20 @@
 package com.slugger7.upresearch;
 
-/**
+/*
  * Created by Priscilla on 01-Apr-16.
  * This class will be used to store data retrieved from the JSON object - Used for
  *
  */
 
-//import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotations.JsonIgnoreProperties;
 
-//@JsonIgnoreProperties(ignoreUnknown = true)
-public class UserRights
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class Quote
 {
     private String type;
     private Value value;
 
-    public UserRights()
+    public Quote()
     {
 
     }
