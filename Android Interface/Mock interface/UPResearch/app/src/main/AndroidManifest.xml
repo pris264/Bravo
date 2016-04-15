@@ -105,11 +105,10 @@
         <activity
             android:name=".ChangePublication"
             android:label="@string/title_activity_change_publication"
-            android:parentActivityName=".Publications"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:parentActivityName=".ViewPublications">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Publications" />
+                android:value=".ViewPublications" />
         </activity>
         <activity
             android:name=".Admin"
