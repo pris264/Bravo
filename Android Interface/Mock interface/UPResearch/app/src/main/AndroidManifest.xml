@@ -92,7 +92,7 @@
             android:parentActivityName=".ViewResearchGroup">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".ResearchGroup" />
+                android:value="com.slugger7.upresearch.ResearchGroup" />
         </activity>
         <activity
             android:name=".RemoveFromGroup"
@@ -105,10 +105,10 @@
         <activity
             android:name=".ChangePublication"
             android:label="@string/title_activity_change_publication"
-            android:parentActivityName=".ViewPublications">
+            android:parentActivityName=".ViewPublication">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".ViewPublications" />
+                android:value=".ViewPublication" />
         </activity>
         <activity
             android:name=".Admin"

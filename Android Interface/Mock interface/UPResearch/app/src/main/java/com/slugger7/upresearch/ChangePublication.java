@@ -49,10 +49,13 @@ public class ChangePublication extends AppCompatActivity {
         skbProg.setProgress(curr.getProgress());
         cbxComplete.setChecked(curr.getActive());
         cbxAct.setChecked(curr.getActive());
-    }
 
-    public void onSubmit()
-    {
-        this.finish();
+        Button submit = (Button) findViewById(R.id.btnSubmit);
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 }

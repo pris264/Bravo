@@ -135,7 +135,6 @@
         android:text="@string/submit"
         android:id="@+id/btnSubmit"
         android:layout_below="@+id/skbProgress"
-        android:layout_centerHorizontal="true"
-        android:onClick="onSubmit()"/>
+        android:layout_centerHorizontal="true"/>
 
 </RelativeLayout>
