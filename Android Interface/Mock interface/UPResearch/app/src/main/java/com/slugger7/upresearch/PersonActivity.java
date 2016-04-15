@@ -41,7 +41,14 @@ public class PersonActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item){
         int id = item.getItemId();
         Intent intent = null;
-
+        if (id == R.id.action_edit_details)
+        {
+            intent = new Intent(this, PersonDetails.class);
+        }
+        if (id == R.id.action_logout)
+        {
+            System.exit(0);
+        }
         if(id == R.id.add_user_to_group){
             intent = new Intent(this, AddToGroup.class);
         }

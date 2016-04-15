@@ -7,11 +7,17 @@ public class MockUserDetails {
     public static String getUserDetails(String username)
     {
         return "{name : 'Kevin', " +
-                "surname : '', " +
+                "surname : 'Heritage', " +
                 "email : 'kheritage222@gmail.com', " +
                 "staffnumber : '13044924', " +
                 "notifications : 'false', " +
                 "username : 'slugger7', " +
                 "cellphone : '0767405640'}";
+    }
+
+    public static String getUserList()
+    {
+        return "{userlist : [{username : 'slugger7'}, " +
+                "{username : 'slugger8'}]}";
     }
 }

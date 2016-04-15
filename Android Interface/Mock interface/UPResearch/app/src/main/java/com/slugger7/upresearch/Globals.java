@@ -1,7 +1,5 @@
 package com.slugger7.upresearch;
 
-import org.json.JSONObject;
-
 import java.util.ArrayList;
 import java.util.List;
 
