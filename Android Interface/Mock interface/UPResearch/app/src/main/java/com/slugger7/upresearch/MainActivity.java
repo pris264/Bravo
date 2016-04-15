@@ -29,17 +29,22 @@ public class MainActivity extends AppCompatActivity {
         //Getting the text fields
         EditText username = (EditText) findViewById(R.id.txt_username);
         EditText password = (EditText) findViewById(R.id.txt_password);
-
+        boolean[] userRights;
         assert username != null;
         assert password != null;
         //checking username and password
-        if ("cos301".equals(username.getText().toString()) && password.getText().toString().equals("password"))
+        if ("cos301".equals(username.getText().toString()) && (password.getText().toString().equals("user") || password.getText().toString().equals("hor") || password.getText().toString().equals("admin")) )
         {
             setUserDetails(MockUserDetails.getUserDetails(username.getText().toString()));
+            userRights = getAccessRights(username, password);
+
             Intent intent = new Intent(this, home.class);
+            intent.putExtra("User Rights", userRights);
+
             finish(); // Closing the current activity
-            boolean[] userRights = getAccessRights(username, password);
+
             startActivity(intent); // Starting the new activity
+
             if (!Globals.validate())
             {
                 Intent userintent = new Intent(this, PersonDetails.class);
