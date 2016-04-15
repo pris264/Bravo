@@ -119,6 +119,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.slugger7.upresearch.home" />
         </activity>
+        <activity
+            android:name=".AddResearchCategory"
+            android:label="@string/add_research_category"
+            android:parentActivityName=".Admin">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.slugger7.upresearch.Admin" />
+        </activity>
     </application>
 
 </manifest>
