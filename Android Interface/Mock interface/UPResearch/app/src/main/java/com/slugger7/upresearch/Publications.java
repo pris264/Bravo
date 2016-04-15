@@ -29,6 +29,7 @@ public class Publications extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        assert fab != null;
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -39,7 +40,7 @@ public class Publications extends AppCompatActivity {
                                 Globals.setCurrentPublicationIndex(-1);
                                 //Load addPublication activity
                                 Intent intent = new Intent(Publications.this, AddPublication.class); // Creating the intent to start a new activity
-                                finish(); // Closing the current activity
+                              //  finish(); // Closing the current activity
                                 startActivity(intent); // Starting the new activity
                             }
                         }).show();
@@ -47,9 +48,17 @@ public class Publications extends AppCompatActivity {
         });
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        assert toolbar != null;
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 
         //Populate List of Publications
         ListView publications = (ListView) findViewById(R.id.listViewPublications);
+        assert publications != null;
         publications.setOnItemClickListener(new ListView.OnItemClickListener()
         {
             @Override
