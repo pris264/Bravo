@@ -1,4 +1,4 @@
-package test.helloworld;
+package com.slugger7.upresearch;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
