@@ -121,11 +121,8 @@ public class home extends AppCompatActivity
         }
         if (id == R.id.nav_group)
         {
-<<<<<<< HEAD
             intent = new Intent(this, ResearchGroup.class);
-=======
             //TODO
->>>>>>> 6590625836801bc5f5c890eb605c54243d9ae9c5
         }
         if (id == R.id.nav_publications)
         {
