@@ -13,6 +13,7 @@ import org.json.JSONObject;
 
 public class MainActivity extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -80,9 +81,10 @@ public class MainActivity extends AppCompatActivity {
     }
     /**
      * This function sends a request to the server for user access rights and will receive those rights as well as if the user
-     * is authorised for any acess at all.
+     * is authorised for any access at all.
      * @return boolean array
      */
+
     public boolean[] getAccessRights(EditText username, EditText password)
     {
       boolean accessRights[] = new boolean[3];
