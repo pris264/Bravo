@@ -27,12 +27,24 @@
     <string name="title_activity_person__details">Person_Details</string>
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="title_activity_person_details">User Details</string>
-    <string name="name">Name</string>
     <string name="surname">Surname</string>
     <string name="email">Email</string>
     <string name="cellphone">Cellphone</string>
     <string name="notifications">Notifications</string>
     <string name="staff_number">Staff Number</string>
     <string name="save">Save</string>
+    <string name="title_activity_add_publication">Add Publication</string>
+    <string name="title_activity_view_publication">View Publication</string>
+    <string name="title_activity_publications">Publications</string>
+    <string name="publications">Publications</string>
+    <string name="enter_publication_details">Enter the details of the publication to be added:</string>
+    <string name="url">URL</string>
+    <string name="due_date">Due Date</string>
+    <string name="complete_question">Complete?</string>
+    <string name="progress">Progress(%)</string>
+    <string name="submit">Submit</string>
+    <string name="modify_publication">Modify Publication</string>
+    <string name="active">Active?</string>
+    <string name="name">Name</string>
 
 </resources>

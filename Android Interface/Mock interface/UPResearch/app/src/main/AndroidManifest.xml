@@ -40,6 +40,34 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.slugger7.upresearch.PersonActivity" />
         </activity>
+        <activity
+            android:name=".Publications"
+            android:label="@string/title_activity_publications"
+            android:parentActivityName=".home"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.slugger7.upresearch.home" />
+
+        <activity
+            android:name=".AddPublication"
+            android:label="@string/title_activity_add_publication"
+            android:parentActivityName=".Publications"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.slugger7.upresearch.Publications" />
+        </activity>
+        <activity
+            android:name=".ViewPublication"
+            android:label="@string/title_activity_view_publication"
+            android:parentActivityName=".Publications"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.slugger7.upresearch.Publications" />
+        </activity>
     </application>
 
 </manifest>

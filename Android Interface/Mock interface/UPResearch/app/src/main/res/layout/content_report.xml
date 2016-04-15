@@ -26,10 +26,10 @@
         android:layout_width="350px"
         android:layout_height="450px"
         android:id="@+id/imageView"
-        android:background="@mipmap/graph"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/button"
         android:visibility="invisible"
         />
 
+    <!--android:background="@mipmap/graph"-->
 </RelativeLayout>

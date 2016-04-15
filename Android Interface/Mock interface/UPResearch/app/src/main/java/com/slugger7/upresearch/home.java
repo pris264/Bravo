@@ -47,7 +47,7 @@ public class home extends AppCompatActivity
         Bundle extras = getIntent().getExtras();
 
         //Get the UserRights array and update options to be displayed on menu
-        boolean [] users = extras.getBooleanArray("User Rights");
+        boolean [] users = extras == null ? new boolean[]{true, true} : extras.getBooleanArray("User Rights");
         assert navigationView != null;
 
         //Hides the appropriate menu field for certain types of users
@@ -122,6 +122,10 @@ public class home extends AppCompatActivity
         if (id == R.id.nav_group)
         {
             //TODO
+        }
+        if (id == R.id.nav_publications)
+        {
+            intent = new Intent(this, Publications.class);
         }
         if (id == R.id.nav_report)
         {

@@ -12,6 +12,9 @@
             android:id="@+id/nav_group"
             android:title="@string/group" />
         <item
+            android:id="@+id/nav_publications"
+            android:title="@string/publications" />
+        <item
             android:id="@+id/nav_report"
             android:title="@string/report" />
     </group>
