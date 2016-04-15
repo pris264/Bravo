@@ -34,5 +34,29 @@ public class Admin extends AppCompatActivity {
             }
         });
     }
+    
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.menu_add_research_category, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+        int id = item.getItemId();
+        Intent intent = null;
+
+        if(id == R.id.add_research_category){
+            intent = new Intent(this, AddResearchCategory.class);
+        }
+
+      
+        if(intent != null){
+            //finish();
+            startActivity(intent);
+        }
+
+        return true;
+    }
 
 }
