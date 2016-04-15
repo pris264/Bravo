@@ -60,7 +60,7 @@ public class ViewPublication extends AppCompatActivity {
         // Handle item selection
         switch (item.getItemId()) {
             case R.id.action_modify_publication:
-                Intent intent = new Intent(ViewPublication.this, ChangePublication.class);
+                Intent intent = new Intent(ViewPublication.this, AddPublication.class);
                 startActivity(intent);
                 return true;
             case R.id.action_logout:
