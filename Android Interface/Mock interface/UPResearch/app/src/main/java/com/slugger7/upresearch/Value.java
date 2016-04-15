@@ -7,26 +7,25 @@ public class Value
 {
 
     private Long id;
-    private String quote;
+    private String userRights;
 
-    public Value()
-    {
+    public Value() {
     }
 
     public Long getId() {
         return this.id;
     }
 
-    public String getQuote() {
-        return this.quote;
+    public String getUserRights() {
+        return this.userRights;
     }
 
     public void setId(Long id) {
         this.id = id;
     }
 
-    public void setQuote(String quote) {
-        this.quote = quote;
+    public void setUserRights(String userRights) {
+        this.userRights = userRights;
     }
 
     @Override
@@ -34,7 +33,7 @@ public class Value
     {
         return "Value{" +
                 "id=" + id +
-                ", quote='"  + '\'' +
+                ", quote='" + userRights + '\'' +
                 '}';
     }
 }

@@ -9,8 +9,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.EditText;
-import android.widget.TextView;
 
 public class PersonActivity extends AppCompatActivity {
 
@@ -31,40 +29,29 @@ public class PersonActivity extends AppCompatActivity {
             }
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        TextView display = (TextView) findViewById(R.id.display);
-        display.setText(Globals.getJson());
     }
 
-
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
+    public boolean onCreateOptionsMenu(Menu menu){
         getMenuInflater().inflate(R.menu.menu_person, menu);
         return true;
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
+    public boolean onOptionsItemSelected(MenuItem item){
         int id = item.getItemId();
+        Intent intent = null;
 
-        if (id == R.id.action_logout)
-        {
-            // Just close the activity for now as the user is not really logged in yet (mock interface)
-            System.exit(0);
-            return true;
+        if(id == R.id.add_user_to_group){
+            intent = new Intent(this, AddToGroup.class);
         }
-        if (id == R.id.action_edit_details)
-        {
-            // Open the edit details activity
-            Intent intent = new Intent(this, PersonDetails.class);
+        if(id == R.id.remove_user_from_group){
+            intent = new Intent(this, RemoveFromGroup.class);
+        }
+        if(intent != null){
             startActivity(intent);
         }
 
-        return super.onOptionsItemSelected(item);
+        return true;
     }
-
 }
