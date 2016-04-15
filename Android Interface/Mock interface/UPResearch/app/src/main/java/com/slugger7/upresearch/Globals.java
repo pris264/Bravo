@@ -2,6 +2,9 @@ package com.slugger7.upresearch;
 
 import org.json.JSONObject;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by Slugger7 on 4/14/2016.
  */
@@ -13,6 +16,8 @@ public class Globals {
     private static String Email = "";
     private static String Username = "";
     private static String Staffnumber = "";
+    private static List<Publication> publications = new ArrayList<>();
+    private static int currentPublicationIndex = -1;
 
     public static String getName()
     {
@@ -116,5 +121,21 @@ public class Globals {
                 "', notifications : '" + getNotifications() +
                 "', username : '" + getUsername() +
                 "', cellphone : '" + getCellphone() + "'}";
+    }
+
+    public static List<Publication> getPublications() {
+        return publications;
+    }
+
+    public static void setPublications(List<Publication> publications) {
+        Globals.publications = publications;
+    }
+
+    public static int getCurrentPublicationIndex() {
+        return currentPublicationIndex;
+    }
+
+    public static void setCurrentPublicationIndex(int currentPublicationIndex) {
+        Globals.currentPublicationIndex = currentPublicationIndex;
     }
 }

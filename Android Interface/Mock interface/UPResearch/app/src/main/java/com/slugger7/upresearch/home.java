@@ -43,6 +43,11 @@ public class home extends AppCompatActivity
         toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        Menu menuItem = navigationView.getMenu();
+        Bundle extras = getIntent().getExtras();
+
+        //Get the UserRights array and update options to be displayed on menu
+        boolean [] users = extras == null ? new boolean[]{true, true} : extras.getBooleanArray("User Rights");
         assert navigationView != null;
         navigationView.setNavigationItemSelectedListener(this);
     }
@@ -98,6 +103,10 @@ public class home extends AppCompatActivity
         {
             //TODO
             intent = new Intent(this, ResearchGroup.class);
+        }
+        if (id == R.id.nav_publications)
+        {
+            intent = new Intent(this, Publications.class);
         }
         if (id == R.id.nav_report)
         {
