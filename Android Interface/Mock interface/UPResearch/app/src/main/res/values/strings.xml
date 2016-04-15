@@ -53,10 +53,6 @@
     <string name="name">Name</string>
 
     <string name="title_activity_change_publication">Change Publication</string>
-    <string-array name="Publications">
-        <item>Good Software development practises</item>
-        <item>Security flaws in modern programing and scripting Languages</item>
-        <item>Strengths and weaknesses of coding in assembly</item>
-    </string-array>
+    <string name="change_publication_details">Change the publication detail as necessary</string>
     <string name="title_activity_admin">Admin</string>
 </resources>
