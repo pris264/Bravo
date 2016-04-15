@@ -135,13 +135,11 @@ public class home extends AppCompatActivity
         }
         if (id == R.id.nav_user)
         {
-            System.out.println("Here");
             intent = new Intent(this, PersonActivity.class);
         }
 
         if (intent != null)
         {
-            System.out.println("Here 2");
             startActivity(intent);
         }
 
