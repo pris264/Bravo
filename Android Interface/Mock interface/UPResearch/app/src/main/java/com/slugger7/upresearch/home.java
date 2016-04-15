@@ -49,6 +49,25 @@ public class home extends AppCompatActivity
         //Get the UserRights array and update options to be displayed on menu
         boolean [] users = extras == null ? new boolean[]{true, true} : extras.getBooleanArray("User Rights");
         assert navigationView != null;
+
+        //Hides the appropriate menu field for certain types of users
+        MenuItem group =  menuItem.findItem(R.id.nav_group);
+        MenuItem admin =  menuItem.findItem(R.id.nav_admin);
+
+        if(users != null)
+        {
+            if(users[0] == true)
+            {
+                group.setVisible(false);
+                admin.setVisible(false);
+            }
+            else if(users[1] == true)
+            {
+                admin.setVisible(false);
+            }
+
+        }
+
         navigationView.setNavigationItemSelectedListener(this);
     }
 
@@ -82,7 +101,7 @@ public class home extends AppCompatActivity
         if (id == R.id.action_logout)
         {
             // Just close the activity for now as the user is not really logged in yet (mock interface)
-            finish();
+            System.exit(0);
             return true;
         }
 
@@ -91,6 +110,7 @@ public class home extends AppCompatActivity
 
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
+
         // Handle navigation view item clicks here.
         int id = item.getItemId();
         Intent intent = null;
@@ -101,7 +121,11 @@ public class home extends AppCompatActivity
         }
         if (id == R.id.nav_group)
         {
+<<<<<<< HEAD
             intent = new Intent(this, ResearchGroup.class);
+=======
+            //TODO
+>>>>>>> 6590625836801bc5f5c890eb605c54243d9ae9c5
         }
         if (id == R.id.nav_publications)
         {
