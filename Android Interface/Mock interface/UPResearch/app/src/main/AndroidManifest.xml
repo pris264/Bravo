@@ -81,9 +81,10 @@
             android:name=".ViewResearchGroup"
             android:label="@string/title_activity_view_research_group"
             android:parentActivityName=".ResearchGroup"
-            android:theme="@style/AppTheme.NoActionBar"> <meta-data
-            android:name="android.support.PARENT_ACTIVITY"
-            android:value="com.slugger7.upresearch.ResearchGroup"/>
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.slugger7.upresearch.ResearchGroup" />
         </activity>
         <activity
             android:name=".AddToGroup"
@@ -93,12 +94,13 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ResearchGroup" />
         </activity>
-        <activity android:name=".RemoveFromGroup"
+        <activity
+            android:name=".RemoveFromGroup"
             android:label="@string/remove_user"
             android:parentActivityName=".ViewResearchGroup">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".ViewResearchGroup"/>
+                android:value=".ViewResearchGroup" />
         </activity>
         <activity
             android:name=".ChangePublication"
@@ -107,7 +109,16 @@
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Publications"/>
+                android:value=".Publications" />
+        </activity>
+        <activity
+            android:name=".Admin"
+            android:label="@string/title_activity_admin"
+            android:parentActivityName=".home"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.slugger7.upresearch.home" />
         </activity>
     </application>
 

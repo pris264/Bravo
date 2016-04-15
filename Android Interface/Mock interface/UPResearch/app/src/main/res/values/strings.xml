@@ -58,4 +58,5 @@
         <item>Security flaws in modern programing and scripting Languages</item>
         <item>Strengths and weaknesses of coding in assembly</item>
     </string-array>
+    <string name="title_activity_admin">Admin</string>
 </resources>
