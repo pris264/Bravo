@@ -27,4 +27,12 @@
     <string name="title_activity_person__details">Person_Details</string>
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="title_activity_person_details">User Details</string>
+    <string name="name">Name</string>
+    <string name="surname">Surname</string>
+    <string name="email">Email</string>
+    <string name="cellphone">Cellphone</string>
+    <string name="notifications">Notifications</string>
+    <string name="staff_number">Staff Number</string>
+    <string name="save">Save</string>
+
 </resources>

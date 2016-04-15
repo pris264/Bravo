@@ -43,7 +43,31 @@ public class home extends AppCompatActivity
         toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        Menu menuItem = navigationView.getMenu();
+        Bundle extras = getIntent().getExtras();
+
+        //Get the UserRights array and update options to be displayed on menu
+        boolean [] users = extras.getBooleanArray("User Rights");
         assert navigationView != null;
+
+        //Hides the appropriate menu field for certain types of users
+        MenuItem group =  menuItem.findItem(R.id.nav_group);
+        MenuItem admin =  menuItem.findItem(R.id.nav_admin);
+
+        if(users != null)
+        {
+            if(users[0] == true)
+            {
+                group.setVisible(false);
+                admin.setVisible(false);
+            }
+            else if(users[1] == true)
+            {
+                admin.setVisible(false);
+            }
+
+        }
+
         navigationView.setNavigationItemSelectedListener(this);
     }
 
@@ -86,6 +110,7 @@ public class home extends AppCompatActivity
 
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
+
         // Handle navigation view item clicks here.
         int id = item.getItemId();
         Intent intent = null;
