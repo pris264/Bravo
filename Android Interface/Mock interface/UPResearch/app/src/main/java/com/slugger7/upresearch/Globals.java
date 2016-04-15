@@ -124,6 +124,11 @@ public class Globals {
     }
 
     public static List<Publication> getPublications() {
+        if(publications.isEmpty()) {
+            publications.add(new Publication("Good Software development practises", "http://www.google.docs/user/niel/software_dev_practises", "13/06/2016", false, 60, true, 23));
+            publications.add(new Publication("Security flaws in modern programing and scripting Languages", "http://www.github.com/kayle/security_flaws", "25/12/2015", true, -1, false, 40));
+            publications.add(new Publication("Strengths and weaknesses of coding in assembly", "http://google.coms/user/fenril/assmbly", "10/11/2016", false, 20, true, 103));
+        }
         return publications;
     }
 
