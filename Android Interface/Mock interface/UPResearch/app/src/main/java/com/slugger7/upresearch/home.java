@@ -97,11 +97,10 @@ public class home extends AppCompatActivity
 
         if (id == R.id.nav_admin)
         {
-            //TODO
+            intent = new Intent(this, Admin.class);
         }
         if (id == R.id.nav_group)
         {
-            //TODO
             intent = new Intent(this, ResearchGroup.class);
         }
         if (id == R.id.nav_publications)
